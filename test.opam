@@ -1,0 +1,18 @@
+opam-version: "2.0"
+name: "test"
+maintainer: "Helmut Brandl <helmut.brandl@gmx.net>"
+authors: "Helmut Brandl <helmut.brandl@gmx.net>"
+license: "GPLv2"
+build: [
+  ["dune" "build" "@install" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.08.0"}
+  "alba" {build}
+  "dune" {build}
+  "ocamlfind" {build}
+  "odoc" {build}
+  "js_of_ocaml" {build}
+  "js_of_ocaml-ppx" {build}
+  "ppx_inline_test" {build}
+]

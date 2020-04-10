@@ -1,0 +1,35 @@
+(executable
+    (name counter)
+    (modules counter)
+    (libraries alba.fmlib alba.fmlib_js)
+    (modes byte js))
+
+(rule
+    (targets counter.js)
+    (mode (promote (until-clean)))
+    (action
+        (run %{bin:cp} %{dep:counter.bc.js} %{targets})))
+
+
+
+(executable
+    (name text_reverse)
+    (modules text_reverse)
+    (libraries alba.fmlib alba.fmlib_js)
+    (modes byte js))
+
+(rule
+    (targets text_reverse.js)
+    (mode (promote (until-clean)))
+    (action
+        (run %{bin:cp} %{dep:text_reverse.bc.js} %{targets})))
+
+
+
+(alias
+    (name default)
+    (deps counter.js counter.html))
+
+(env
+    (dev
+        (flags (:standard -warn-error -A))))
