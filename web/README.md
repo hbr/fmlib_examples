@@ -5,6 +5,8 @@
 
 - An input field with text reversal.
 
+- [A simple todo list](https://hbr.github.io/fmlib_examples)
+
 Each web application has a `<name>.ml` source file and a `<name>.html` file.
 Just type
 

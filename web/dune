@@ -26,6 +26,20 @@
 
 
 
+(executable
+    (name simple_todo)
+    (modules simple_todo)
+    (libraries alba.fmlib alba.fmlib_js)
+    (modes byte js))
+
+(rule
+    (targets simple_todo.js)
+    (mode (promote (until-clean)))
+    (action
+        (run %{bin:cp} %{dep:simple_todo.bc.js} %{targets})))
+
+
+
 (alias
     (name default)
     (deps counter.js counter.html))
