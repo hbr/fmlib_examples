@@ -4,7 +4,11 @@ open Fmlib
 module Browser = Fmlib_js.Browser
 
 
-module Vdom = Html2.Vdom (Browser)
+module Appl = Web_application.Make (Browser)
+
+module Vdom = Appl.Dom
+
+module Attribute = Appl.Attribute
 
 
 
@@ -32,5 +36,5 @@ let update (message: message) (model: int): int =
 
 
 let _ =
-    let module Program = Browser.Make (Vdom) in
+    let module Program = Browser.Make (Appl) in
     Program.sandbox model view update
