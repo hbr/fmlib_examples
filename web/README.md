@@ -1,11 +1,11 @@
 # Simple Web Applications
 
-- A counter, which can be incremented and decremented (the *hello world* of web
-  applications).
+- [A counter, which can be incremented and decremented (the *hello world* of web
+  applications)](https://hbr.github.io/fmlib_examples/web/counter.html)
 
-- An input field with text reversal.
+- [An input field with text reversal](https://hbr.github.io/fmlib_examples/web/text_reverse.html)
 
-- [A simple todo list](https://hbr.github.io/fmlib_examples)
+- [A simple todo list](https://hbr.github.io/fmlib_examples/web/simple_todo.html)
 
 Each web application has a `<name>.ml` source file and a `<name>.html` file.
 Just type
