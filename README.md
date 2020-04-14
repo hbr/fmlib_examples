@@ -8,6 +8,14 @@ With opam, it is easy to install `fmlib`.
 
     opam install alba
 
+or
+    opam pin https://github.com/hbr/albatross/zipball/<branch>
+
+The second command is needed, if you need some features of `fmlib` which are not
+yet released to the opam repository. The branch `feature` is usually the most
+recent branch.
+
+
 `fmlib` is currently packaged with the alba compiler. If there is sufficient
 usage of the library, it will be released as a standalone package.
 
