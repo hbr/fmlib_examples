@@ -40,6 +40,20 @@
 
 
 
+(executable
+    (name http_request)
+    (modules http_request)
+    (libraries alba.fmlib alba.fmlib_js)
+    (modes byte js))
+
+(rule
+    (targets http_request.js)
+    (mode (promote (until-clean)))
+    (action
+        (run %{bin:cp} %{dep:http_request.bc.js} %{targets})))
+
+
+
 (alias
     (name default)
     (deps counter.js counter.html))

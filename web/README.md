@@ -7,6 +7,8 @@
 
 - [A simple todo list](https://hbr.github.io/fmlib_examples/web/simple_todo.html)
 
+- [Http request](https://hbr.github.io/fmlib_examples/web/http_request.html)
+
 Each web application has a `<name>.ml` source file and a `<name>.html` file.
 Just type
 
